@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0" version="29.6.1">
+  <diagram name="Fluxograma Spark Instalacao" id="0">
+    <mxGraphModel dx="1938" dy="1078" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="vm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Início" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-2" edge="1" parent="1" source="vm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="update">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vm" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Preparação da VM / Ubuntu" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-3" edge="1" parent="1" source="update" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="deps">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="update" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Atualizar Sistema&#xa;apt update / upgrade" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-4" edge="1" parent="1" source="deps" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="download">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="deps" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Instalar Dependências&#xa;Java, Python, Scala" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-5" edge="1" parent="1" source="download" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="extract">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="download" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Download Apache Spark&#xa;(wget)" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-6" edge="1" parent="1" source="extract" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="install">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="extract" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Extrair Arquivo&#xa;tar -xvzf" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-7" edge="1" parent="1" source="install" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="env">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="install" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Mover para /opt/spark" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-8" edge="1" parent="1" source="env" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="env" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Configurar Variáveis&#xa;SPARK_HOME / PATH" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-9" edge="1" parent="1" source="test" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="validate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="test" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Executar spark-shell / pyspark" vertex="1">
+          <mxGeometry height="60" width="180" x="320" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="w7IKvqU6M_3OihNy8dx_-10" edge="1" parent="1" source="validate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="validate" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Teste Exemplo (SparkPi / WordCount)" vertex="1">
+          <mxGeometry height="70" width="180" x="320" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Spark Funcionando" vertex="1">
+          <mxGeometry height="60" width="120" x="350" y="980" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
